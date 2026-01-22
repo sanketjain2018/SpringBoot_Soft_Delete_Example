@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Soft Delete Demo | Spring Boot</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<div th:replace="layout/navbar :: navbar"></div>
+
+<!-- HEADER / HERO -->
+<div th:replace="layout/header :: header"></div>
+
+<!-- HERO SECTION -->
+<div class="container mt-5">
+    <div class="row align-items-center">
+        <div class="col-md-6">
+            <h2 class="fw-bold">Manage Employees the Smart Way</h2>
+            <p class="lead text-muted">
+                A Spring Boot application demonstrating
+                <b>Soft Delete</b> using Hibernate 6, MySQL, and Thymeleaf.
+            </p>
+
+            <a href="/employees" class="btn btn-primary btn-lg me-2">
+                Manage Employees
+            </a>
+            <a href="/employees/deleted" class="btn btn-outline-secondary btn-lg">
+                View Deleted Records
+            </a>
+        </div>
+
+        <div class="col-md-6 text-center">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+                 alt="Employee"
+                 class="img-fluid"
+                 width="300">
+        </div>
+    </div>
+</div>
+
+<hr class="my-5"/>
+
+<!-- FEATURES SECTION -->
+<div class="container">
+    <h3 class="text-center mb-4">Key Features</h3>
+
+    <div class="row text-center">
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Soft Delete</h5>
+                    <p class="card-text">
+                        Records are never removed from the database.
+                        They are safely marked as deleted.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Restore Anytime</h5>
+                    <p class="card-text">
+                        Deleted employees can be restored instantly
+                        without data loss.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Audit Friendly</h5>
+                    <p class="card-text">
+                        Created & updated timestamps ensure
+                        enterprise-level audit tracking.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr class="my-5"/>
+
+<!-- HOW IT WORKS -->
+<div class="container">
+    <h3 class="text-center mb-4">How It Works</h3>
+
+    <div class="row">
+        <div class="col-md-3 text-center">
+            <h5>1️⃣ Add</h5>
+            <p>Create a new employee record</p>
+        </div>
+        <div class="col-md-3 text-center">
+            <h5>2️⃣ Soft Delete</h5>
+            <p>Record marked inactive, not removed</p>
+        </div>
+        <div class="col-md-3 text-center">
+            <h5>3️⃣ Hidden</h5>
+            <p>Deleted records are hidden automatically</p>
+        </div>
+        <div class="col-md-3 text-center">
+            <h5>4️⃣ Restore</h5>
+            <p>Bring back deleted records anytime</p>
+        </div>
+    </div>
+</div>
+
+<hr class="my-5"/>
+
+<!-- TECH STACK -->
+<div class="container">
+    <h3 class="text-center mb-4">Technology Stack</h3>
+
+    <div class="row text-center">
+        <div class="col-md-2">☕ Java 17</div>
+        <div class="col-md-2">🌱 Spring Boot</div>
+        <div class="col-md-2">🛢 MySQL</div>
+        <div class="col-md-2">🧩 Hibernate 6</div>
+        <div class="col-md-2">🎨 Thymeleaf</div>
+        <div class="col-md-2">📦 Bootstrap 5</div>
+    </div>
+</div>
+
+<hr class="my-5"/>
+
+<!-- CALL TO ACTION -->
+<div class="container text-center mb-5">
+    <h3>Ready to Explore?</h3>
+    <p class="text-muted">
+        Check the complete CRUD with advanced soft delete implementation.
+    </p>
+
+    <a href="/employees" class="btn btn-success btn-lg">
+        Get Started
+    </a>
+</div>
+
+<!-- FOOTER -->
+<div th:replace="layout/footer :: footer"></div>
+
+</body>
+</html>
